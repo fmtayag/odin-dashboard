@@ -16,6 +16,7 @@
   box-sizing: border-box;
 }
 
+input[type=text],
 h1,
 h2,
 h3,
@@ -33,12 +34,19 @@ img.avatar {
     box-shadow: 2px 4px 8px -8px black;
     object-fit: contain;
 
-    & .small {
-        max-width: 32px;
+    &.small {
+        max-width: 48px;
+        max-height: 48px;
     }
 
-    & .medium {
+    &.medium {
         max-width: 48px;
+        max-height: 48px;
+    }
+    
+    &.large {
+        max-width: 64px;
+        max-height: 64px;
     }
 }
 
@@ -96,5 +104,54 @@ img.avatar {
 #header {
     display: grid;
     grid-template-rows: 1fr 1fr;
+
+    
 }
 
+#header > div:nth-of-type(1) { /*Div that holds searchbar and profile */
+    display: grid;
+    padding: 1em;
+    grid-template-columns: 2fr 1fr;
+}
+
+#searchbar {
+    display: flex;
+    align-items: center;
+
+    & input[type=text] {
+        outline: none;
+        border: 0;
+        border-radius: 16px;
+        width: 90%;
+        height: 1.5rem;
+        padding-left: 16px;
+        background-color: var(--tertiary-clr);
+    }
+    & .material-symbols-outlined {
+        vertical-align: middle;
+        margin-right: 0.5em;
+    }
+}
+
+#profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+
+    & .material-symbols-outlined, img, p {
+        align-self: center;
+    }
+
+    & .material-symbols-outlined {
+        justify-self: right;
+        margin-right: 16px;
+    }
+
+    & img {
+        margin-left: 8px;
+    }
+
+    & p {
+        font-weight: bold;
+        display: inline;
+    }
+}
