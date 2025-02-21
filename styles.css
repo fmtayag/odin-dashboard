@@ -1,5 +1,5 @@
 :root {
-    --primary-clr: dodgerblue;
+    --primary-clr: seagreen;
     --secondary-clr: white;
     --tertiary-clr: rgb(227, 230, 233);
 
@@ -7,7 +7,7 @@
     --text-color-primary: black;
     --text-color-secondary: gray;
 
-    --card-border-color: orange;
+    --card-border-color: limegreen;
     --card-shadow: 0 6px 8px -7px black;
 
     --empty-space-size: 30px;
