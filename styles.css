@@ -8,8 +8,11 @@
     --text-color-secondary: gray;
 
     --card-border-color: orange;
+    --card-shadow: 0 6px 8px -7px black;
 
     --empty-space-size: 30px;
+
+    --h2-padding: 0.5em;
 }
 
 * {
@@ -210,19 +213,42 @@ button[type=button] {
     display: grid;
     gap: 1em;
     grid-template-areas: 
-        "projects announce"
-        "projects trends";
+        "projects projects projects announce"
+        "projects projects projects announce"
+        "projects projects projects trends";
 }
 
 #body > div:nth-of-type(1) { /* Contains the cards subcontainer */
     grid-area: projects;
     & h2 {
-        padding-bottom: 0.5em;
+        padding-bottom: var(--h2-padding);
     }
 }
 
 #body > div:nth-of-type(2) {
     grid-area: announce;
+    & h2 {
+        padding-bottom: var(--h2-padding);
+    }
+
+    & .card {
+        padding: 1em;
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: var(--card-shadow);
+
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        & > div {
+            padding: 1em;
+        }
+        & > div:not(:last-child) {
+            border-bottom: 2px solid var(--tertiary-clr);
+        }
+    }
 }
 
 #body > div:nth-of-type(3) {
@@ -233,28 +259,29 @@ button[type=button] {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1em;
+
+    & .card {
+        padding: 2em;
+        border-radius: 8px;
+        border-left: 8px solid var(--card-border-color);
+    
+        color: var(--text-color-primary);
+        background-color: white;
+        box-shadow: var(--card-shadow);
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 15em;
+    
+        & div:nth-of-type(1) > p { /* Contains h1 and p */
+            color: var(--text-color-secondary);
+        }
+    
+        & div:nth-of-type(2) { /* Contains material icons */
+            justify-items: right;
+        }
+        
+    }
 }
 
-.card {
-    padding: 2em;
-    border-radius: 8px;
-    border-left: 8px solid var(--card-border-color);
-
-    color: var(--text-color-primary);
-    background-color: white;
-    box-shadow: 0 6px 8px -7px black;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 15em;
-
-    & div:nth-of-type(1) > p { /* Contains h1 and p */
-        color: var(--text-color-secondary);
-    }
-
-    & div:nth-of-type(2) { /* Contains material icons */
-        justify-items: right;
-    }
-    
-}
