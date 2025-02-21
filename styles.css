@@ -36,8 +36,6 @@ p {
 
 img.avatar {
     border-radius: 50%;
-    border-bottom: 2px solid var(--tertiary-clr);
-    box-shadow: 2px 4px 8px -8px black;
     object-fit: contain;
 
     &.small {
