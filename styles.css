@@ -303,7 +303,7 @@ button[type=button] {
 #projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1em;
+    gap: 2em;
 
     & .card {
         padding: 2em;
@@ -317,7 +317,6 @@ button[type=button] {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 15em;
     
         & div:nth-of-type(1) > p { /* Contains h1 and p */
             color: var(--text-color-secondary);
@@ -327,6 +326,7 @@ button[type=button] {
             justify-items: right;
             
             > p > * { /* The material icons themselves */
+                margin-top: 2em;
                 margin-inline: 0.25em;
             }
         }
