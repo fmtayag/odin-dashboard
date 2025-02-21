@@ -76,9 +76,6 @@ button[type=button] {
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
-#container > * {
-    border: 1px solid dodgerblue;
-}
 #navbar {
     color: var(--text-color-bright);
     background-color: var(--primary-clr);
