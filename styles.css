@@ -149,20 +149,12 @@ button[type=button] {
 }
 
 #profile {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 
     & .material-symbols-outlined, img, p {
         align-self: center;
-    }
-
-    & .material-symbols-outlined {
-        justify-self: right;
-        margin-right: 16px;
-    }
-
-    & img {
-        margin-left: 8px;
     }
 
     & p {
