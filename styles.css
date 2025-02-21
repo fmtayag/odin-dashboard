@@ -310,6 +310,10 @@ button[type=button] {
     
         & div:nth-of-type(2) { /* Contains material icons */
             justify-items: right;
+            
+            > p > * { /* The material icons themselves */
+                margin-inline: 0.25em;
+            }
         }
         
     }
