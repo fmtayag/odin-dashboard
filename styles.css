@@ -238,8 +238,7 @@ button[type=button] {
         box-shadow: var(--card-shadow);
 
         p {
-            overflow: hidden;
-            text-overflow: ellipsis;
+            color: var(--text-color-secondary);
         }
 
         & > div {
