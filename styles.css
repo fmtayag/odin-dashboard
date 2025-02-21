@@ -1,7 +1,7 @@
 :root {
     --primary-clr: dodgerblue;
     --secondary-clr: white;
-    --tertiary-clr: lightgray;
+    --tertiary-clr: rgb(227, 230, 233);
 
     --text-color-bright: white;
     --text-color-primary: black;
@@ -116,6 +116,10 @@ button[type=button] {
 #header {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    
+    /* have to add this to make box shadow work */
+    position: relative; 
+    z-index: 1;
     box-shadow: 0 4px 8px -8px black;
 }
 
@@ -194,4 +198,8 @@ button[type=button] {
     & >* {
         width: 100px;
     }
+}
+
+#body {
+    background-color: var(--tertiary-clr);
 }
