@@ -1,1 +1,1 @@
-Profile picture https://www.quotev.com/story/10065419/Backgrounds-For-Your-Profile/13
+<a href="https://www.flaticon.com/free-icons/animal" title="animal icons">Animal icons created by Freepik - Flaticon</a>
