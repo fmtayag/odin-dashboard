@@ -6,6 +6,8 @@
     --text-color-bright: white;
     --text-color-primary: black;
     --text-color-secondary: gainsboro;
+
+    --empty-space-size: 30px;
 }
 
 * {
@@ -40,6 +42,34 @@ p {
     color: var(--text-color-bright);
     background-color: var(--primary-clr);
 }
+#nav > ul {
+    margin-left: 1em;
+    display: grid;
+    grid-template-rows: 1fr var(--empty-space-size) repeat(6, 1fr) var(--empty-space-size) repeat(3, 1fr);
+    gap: 0.25em;
+
+    list-style: none;
+
+    & .material-symbols-outlined {
+        display: inline-flex;
+        vertical-align: text-bottom;
+        margin-right: 1em;
+    }
+
+    & p {
+        font-weight: bold;
+    }
+
+
+    & h1 > .material-symbols-outlined {
+        display: inline;
+        vertical-align: middle;
+        margin-right: 16px;
+        font-size: 1.25em;
+    }
+
+}
+
 #main {
     display: grid;
     grid-template-rows: 1fr 2fr;
