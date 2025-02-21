@@ -271,8 +271,14 @@ button[type=button] {
             }
         }
 
+        p {
+            font-weight: bold;
+        }
+
         & span {
             display: block;
+            font-weight: normal;
+            color: var(--text-color-secondary);
         }
         
     }
