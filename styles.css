@@ -36,6 +36,10 @@ p {
 #container > * {
     border: 1px solid dodgerblue;
 }
+#navbar {
+    color: var(--text-color-bright);
+    background-color: var(--primary-clr);
+}
 #main {
     display: grid;
     grid-template-rows: 1fr 2fr;
