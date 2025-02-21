@@ -180,13 +180,13 @@ button[type=button] {
     & p {
         justify-self: left;
         font-weight: bold;
-        font-size: 0.75rem;
+        font-size: 0.85rem;
         align-self: center;
 
         & span {
             margin-top: 0.25rem;
             display: block;
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
     }
 }
