@@ -223,7 +223,7 @@ button[type=button] {
     }
 }
 
-#body > div:nth-of-type(2) {
+#body > div:nth-of-type(2) { /* Annnoucement */
     grid-area: announce;
     & h2 {
         padding-bottom: var(--h2-padding);
@@ -248,7 +248,7 @@ button[type=button] {
     }
 }
 
-#body > div:nth-of-type(3) {
+#body > div:nth-of-type(3) { /* Trending */
     grid-area: trends;
 
     & h2 {
@@ -263,7 +263,8 @@ button[type=button] {
 
         & > div {
             display: flex;
-            gap: 1em;
+            margin-block: 1em;
+            gap: 1.5em;
             
             & * {
                 align-self: center;
